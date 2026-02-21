@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+}
+
+.contact {
+    padding-inline: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+    background-color: black;
+    border-radius: 2rem;
+}
