@@ -117,10 +117,30 @@
 
 .profil {
     display: flex;
+    padding-top: 40px;
+    padding-inline: 32px;
+    gap: 32px;
 }
 
 .name-lastname {
     font-family: "Playfair Display", serif;
     font-style: italic;
     font-size: 24px;
+}
+
+.right-section {
+    position: relative;
+    border-radius: 24px;
+    background-image: url(Ressources/Portrait\ Jules.jpg);
+    width: 519px;
+    height: 673px;
+    background-size: cover;
+    background-position: center;
+    padding-inline: 8px;
+}
+
+.get-in-touch {
+    position: relative;
+    width: 100%;
+    bottom: 8px;
 }
