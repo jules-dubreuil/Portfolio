@@ -1,5 +1,6 @@
 .body {
     font-family: "Inter", sans-serif;
+    
 }
 
 .nav {
@@ -9,6 +10,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 8px;
+    font-family: "Inter", sans-serif;
 }
 
 .nav-items {
@@ -26,20 +28,40 @@
     color: white;
     background-color: black;
     border-radius: 2rem;
+    border: none;
 }
 
 .hero {
     position: relative;
-    height: 845px;
+    height: 90.5vh;
     width: auto;
 }
 
 .hero-background {
+    position: relative;
     width: auto;
     height: 100%;
-    background-color: green;
+    background-image: url("Ressources/AdobeStock_806985461.jpeg");
+    background-size: cover;
+    background-position: center;
     color: white;
     border-radius: 24px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-background::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background-image: url("Ressources/AdobeStock_806985461.jpeg");
+    background-size: cover;
+    background-position: center;
+    transform: scaleX(-1); 
+    z-index: -1; 
 }
 
 .hero-content {
@@ -55,18 +77,31 @@
     padding-bottom: 16px;
 }
 
+.obvious {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 74px;
+}
+
 .subtitle {
     font-size: 24px;
     padding-bottom: 32px;
 }
 
+.hero-button {
+    gap: 24px;
+    display: flex;
+}
+
 .primary {
+    display: flex;
+    gap: 16px;
+    align-items: center;
     padding-inline: 24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
     border-radius: 2rem;
+    border: none;
 }
 
 .secondary {
@@ -74,6 +109,18 @@
     padding-top: 12px;
     padding-bottom: 12px;
     color: white;
-    background-color: black;
+    background-color: none;
     border-radius: 2rem;
+    border: 1px;
+    border-color: white;
+}
+
+.profil {
+    display: flex;
+}
+
+.name-lastname {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 24px;
 }
