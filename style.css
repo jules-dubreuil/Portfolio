@@ -21,10 +21,13 @@
 
 .contact {
     position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
     right: 40px;
     padding-inline: 24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     color: white;
     background-color: black;
     border-radius: 2rem;
@@ -75,6 +78,9 @@
 .title {
     font-size: 72px;
     padding-bottom: 16px;
+    line-height: 117%;
+    font-family: "inter", sans-serif;
+    font-weight: 400;
 }
 
 .obvious {
@@ -86,6 +92,8 @@
 .subtitle {
     font-size: 24px;
     padding-bottom: 32px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
 }
 
 .hero-button {
@@ -109,10 +117,10 @@
     padding-top: 12px;
     padding-bottom: 12px;
     color: white;
-    background-color: none;
+    background-color: transparent;
     border-radius: 2rem;
-    border: 1px;
-    border-color: white;
+    border: 1.5px solid #fff;
+    text-decoration: none;
 }
 
 .profil {
