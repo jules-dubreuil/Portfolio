@@ -1,154 +1,213 @@
-.body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: "Inter", sans-serif;
-    
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+.ph {
+    font-size: 18px;
 }
 
 .nav {
     display: flex;
     align-items: center;
-    width: 100%;
     justify-content: center;
-    align-items: center;
-    padding-bottom: 8px;
-    font-family: "Inter", sans-serif;
+    padding: 24px 40px 24px 40px;
+    position: relative;
+    width: 100%;
 }
 
 .nav-items {
     display: flex;
     gap: 24px;
-    justify-content: center;
+    list-style: none;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
 }
 
 .contact {
     position: absolute;
+    right: 40px;
     display: flex;
     align-items: center;
-    gap: 16px;
-    right: 40px;
-    padding-inline: 24px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    gap: 12px;
+    padding: 16px 24px;
     color: white;
     background-color: black;
     border-radius: 2rem;
     border: none;
+    cursor: pointer;
 }
 
 .hero {
-    position: relative;
-    height: 90.5vh;
-    width: auto;
+    padding: 0 12px;
+    height: 90vh;
 }
 
 .hero-background {
     position: relative;
-    width: auto;
     height: 100%;
-    background-image: url("Ressources/AdobeStock_806985461.jpeg");
-    background-size: cover;
-    background-position: center;
+    background: url("Ressources/AdobeStock_806985461.jpeg") center/cover no-repeat;
     color: white;
     border-radius: 24px;
     overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
     z-index: 1;
 }
 
 .hero-background::before {
     content: "";
     position: absolute;
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0;
-    background-image: url("Ressources/AdobeStock_806985461.jpeg");
+    inset: 0;
+    background-image: inherit;
     background-size: cover;
     background-position: center;
-    transform: scaleX(-1); 
-    z-index: -1; 
+
+    transform: scaleX(-1);
+    z-index: 0;
 }
 
 .hero-content {
-    position: absolute;
-    left: 40px;
-    bottom: 40px;
+    position: relative;
+    z-index: 2;
     max-width: 779px;
-    font-family: "Inter", sans-serif;
+    width: 100%;
+    margin-right: auto;
 }
 
 .title {
     font-size: 72px;
-    padding-bottom: 16px;
-    line-height: 117%;
-    font-family: "inter", sans-serif;
+    line-height: 1.1;
     font-weight: 400;
+    margin-bottom: 16px;
 }
 
 .obvious {
     font-family: "Playfair Display", serif;
     font-style: italic;
-    font-size: 74px;
+    font-size: 1.05em;
 }
 
 .subtitle {
     font-size: 24px;
-    padding-bottom: 32px;
-    font-family: "Inter", sans-serif;
     font-weight: 300;
+    margin-bottom: 32px;
 }
 
-.hero-button {
-    gap: 24px;
+.hero-actions {
     display: flex;
+    gap: 24px;
 }
 
 .primary {
     display: flex;
-    gap: 16px;
     align-items: center;
-    padding-inline: 24px;
-    color: black;
-    background-color: white;
-    border-radius: 2rem;
+    gap: 12px;
+    padding: 12px 24px;
+    background: white;
     border: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .secondary {
-    padding-inline: 24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
     color: white;
-    background-color: transparent;
+    border: 1.5px solid white;
     border-radius: 2rem;
-    border: 1.5px solid #fff;
     text-decoration: none;
 }
 
 .profil {
-    display: flex;
-    padding-top: 40px;
-    padding-inline: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 520px;
     gap: 32px;
+    padding: 80px 40px;
 }
 
 .name-lastname {
     font-family: "Playfair Display", serif;
     font-style: italic;
-    font-size: 24px;
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .right-section {
-    position: relative;
+    height: 670px;
+    background: url("Ressources/Portrait Jules.jpg") center/cover;
     border-radius: 24px;
-    background-image: url(Ressources/Portrait\ Jules.jpg);
-    width: 519px;
-    height: 673px;
-    background-size: cover;
-    background-position: center;
-    padding-inline: 8px;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
 }
 
 .get-in-touch {
-    position: relative;
     width: 100%;
-    bottom: 8px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.grey-background {
+    background-color: #f1f1f1;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-img {
+    height: 520px;
+    background: #ddd url("Ressources/AdobeStock_806985461.jpeg") center/cover;
+    border-radius: 24px;
+}
+
+.label-date {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
 }

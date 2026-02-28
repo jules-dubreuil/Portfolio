@@ -1,76 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>Jules Dubreuil | UX/UI Designer</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-<link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
 </head>
-
 <body>
-    <section class="nav">
-        <li class="nav-items">
-            <ul class="items">Home</ul>
-            <ul class="items">About</ul>
-            <ul class="items">Works</ul>
-        </li>
-        <button class="contact">
-            <p>Contact</p>
-            <i class="ph ph-arrow-up-right" style="font-size: 16px;"></i>
-        </button>
-    </section>
-    <section class="hero">
-        <section class="hero-background">
-            <section class="hero-content">
-                <div class="title">I strive to make the complex <em class="obvious">Obvious</em></div>
-                <div class="subtitle">Complexity is not inevitable, it’s a design defect. I analyze, structure and
-                    simplify
-                    to create experiences that work without unnecessary cognitive effort.</div>
-                <div class="hero-button">
-                    <button class="primary">
-                        <p>Download CV</p>
-                        <i class="ph ph-download-simple" style="font-size: 16px;"></i>
-                    </button>
-                    <a href="#" class="secondary">Linkdin</a>
-                </div>
-            </section>
-        </section>
-    </section>
-    <section class="profil">
-        <section class="left-section">
-            <div class="about">About me</div>
-            <div class="name">Hey, I'm <em class="name-lastname">Jules Dubreuil</em></div>
-        </section>
-        <section class="middle-section">
-            <div class="top-paragraphe">I design digital products that turn complexity into clarity. Through research, structure and intentional UI decisions. </div>
-            <div class="bottom-paragraphe">UX|UI Designer and Developer, creating interfaces that feel obvious from the first interaction.</div>
-        </section>
-        <section class="right-section">
-                <button class="get-in-touch">get in touch</button>
-        </section>
-    </section>
-    <section class="grey-background">
-        <section class="top">
-            <section class="left-top">
-                <p>selected works</p>
-                <div class="work">Project that define <em class="name-lastname">my craft</em></div>
-            </section>
-        </section>
-    </section>
-</body>
 
+    <header class="nav">
+        <nav>
+            <ul class="nav-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Works</a></li>
+            </ul>
+        </nav>
+        <button class="contact">
+            <span>Contact</span>
+            <i class="ph ph-arrow-up-right"></i>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-content">
+                    <h1 class="title">I strive to make the complex <em class="obvious">Obvious</em></h1>
+                    <p class="subtitle">Complexity is not inevitable, it’s a design defect. I analyze, structure and simplify to create experiences that work without unnecessary cognitive effort.</p>
+                    <div class="hero-actions">
+                        <button class="primary">
+                            <span>Download CV</span>
+                            <i class="ph ph-download-simple"></i>
+                        </button>
+                        <a href="#" class="secondary">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profil">
+            <div class="left-section">
+                <span class="label">About me</span>
+                <h2 class="name">Hey, I'm <em class="name-lastname">Jules Dubreuil</em></h2>
+            </div>
+            <div class="middle-section">
+                <p class="top-paragraph">I design digital products that turn complexity into clarity. Through research, structure and intentional UI decisions.</p>
+                <p class="bottom-paragraph">UX|UI Designer and Developer, creating interfaces that feel obvious from the first interaction.</p>
+            </div>
+            <div class="right-section">
+                <button class="get-in-touch">Get in touch</button>
+            </div>
+        </section>
+
+        <section class="grey-background">
+            <div class="top-header">
+                <div class="left-top">
+                    <span class="label">Selected works</span>
+                    <h2 class="work">Projects that define <em class="name-lastname">my craft</em></h2>
+                </div>
+                <div class="right-top">
+                    <p class="right-top-content">
+                        Each project is an opportunity to transform complexity into clarity, creating experiences that feel intuitive from the first interaction.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-img"></div>
+                    <div class="label-date">
+                        <span class="project-label">UX/UI Design</span>
+                        <span class="project-date">2025</span>
+                    </div>
+                    <h3 class="project-name">HONOR sprint project</h3>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur. Massa vulputate laoreet elit arcu viverra porttitor at ut.</p>
+                </article>
+                <article class="project-card">
+                    <div class="project-img"></div>
+                    <div class="label-date">
+                        <span class="project-label">UX/UI Design</span>
+                        <span class="project-date">2025</span>
+                    </div>
+                    <h3 class="project-name">HONOR sprint project</h3>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur. Massa vulputate laoreet elit arcu viverra porttitor at ut.</p>
+                </article>
+                <article class="project-card">
+                    <div class="project-img"></div>
+                    <div class="label-date">
+                        <span class="project-label">UX/UI Design</span>
+                        <span class="project-date">2025</span>
+                    </div>
+                    <h3 class="project-name">HONOR sprint project</h3>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur. Massa vulputate laoreet elit arcu viverra porttitor at ut.</p>
+                </article>
+                <article class="project-card">
+                    <div class="project-img"></div>
+                    <div class="label-date">
+                        <span class="project-label">UX/UI Design</span>
+                        <span class="project-date">2025</span>
+                    </div>
+                    <h3 class="project-name">HONOR sprint project</h3>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur. Massa vulputate laoreet elit arcu viverra porttitor at ut.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
 </html>
