@@ -200,3 +200,153 @@ window.addEventListener("resize", () => {
 });
 
 animate();
+
+
+
+
+/*CARROUSEL*/
+
+const projects = [
+      { description: "Plonger dans une expérience unique et immersive", name: "Avengers" },
+      { description: "Une identité de nature entraînante", name: "Ultra-Trail Monarque" },
+      { description: "Entretenir la flamme pour les arts visuels", name: "Musée des Beaux-Arts" },
+      { description: "Redéfinir l'élégance en s'appropriant les codes du luxe", name: "Bélanger" },
+      { description: "Créer une présence digitale forte et mémorable", name: "Studio Nord" },
+    ];
+
+    const track = document.getElementById('track');
+
+    function createCard(project, index) {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.dataset.index = index % projects.length;
+      card.innerHTML = `
+        <div class="card-image"></div>
+        <div class="card-caption">
+          <div class="card-description">${project.description}</div>
+          <div class="card-name">${project.name}</div>
+        </div>
+      `;
+      return card;
+    }
+
+    // Render 3 sets so we can loop in both directions
+    for (let s = 0; s < 3; s++) {
+      projects.forEach((p, i) => track.appendChild(createCard(p, i)));
+    }
+
+    let offset = 0;
+    let isDown = false;
+    let startX = 0;
+    let startOffset = 0;
+    let velocity = 0;
+    let lastX = 0;
+    let lastTime = 0;
+    let rafId = null;
+
+    function getSetWidth() {
+      return track.querySelector('.card').offsetWidth * projects.length;
+    }
+
+    function applyTransform(x) {
+      track.style.transform = `translateX(${x}px)`;
+    }
+
+    function init() {
+      offset = -getSetWidth(); // start showing middle set
+      applyTransform(offset);
+    }
+
+    // Jump silently when we pass into clone territory
+    function wrapOffset() {
+      const setWidth = getSetWidth();
+      if (offset <= -setWidth * 2) {
+        offset += setWidth;
+        applyTransform(offset);
+      } else if (offset >= 0) {
+        offset -= setWidth;
+        applyTransform(offset);
+      }
+    }
+
+    // Mouse
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      track.classList.add('grabbing');
+      startX = e.pageX;
+      startOffset = offset;
+      velocity = 0;
+      lastX = e.pageX;
+      lastTime = Date.now();
+      cancelAnimationFrame(rafId);
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      const now = Date.now();
+      const dt = now - lastTime;
+      if (dt > 0) velocity = (e.pageX - lastX) / dt * 16;
+      lastX = e.pageX;
+      lastTime = now;
+      offset = startOffset + (e.pageX - startX);
+      applyTransform(offset);
+      wrapOffset();
+    });
+
+    document.addEventListener('mouseup', () => {
+      if (!isDown) return;
+      isDown = false;
+      track.classList.remove('grabbing');
+      applyMomentum();
+    });
+
+    // Touch
+    track.addEventListener('touchstart', (e) => {
+      const t = e.touches[0];
+      isDown = true;
+      startX = t.pageX;
+      startOffset = offset;
+      velocity = 0;
+      lastX = t.pageX;
+      lastTime = Date.now();
+      cancelAnimationFrame(rafId);
+    }, { passive: true });
+
+    track.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      const t = e.touches[0];
+      const now = Date.now();
+      const dt = now - lastTime;
+      if (dt > 0) velocity = (t.pageX - lastX) / dt * 16;
+      lastX = t.pageX;
+      lastTime = now;
+      offset = startOffset + (t.pageX - startX);
+      applyTransform(offset);
+      wrapOffset();
+    }, { passive: true });
+
+    track.addEventListener('touchend', () => {
+      isDown = false;
+      applyMomentum();
+    });
+
+    // Momentum
+    function applyMomentum() {
+      const friction = 0.92;
+      function step() {
+        if (Math.abs(velocity) < 0.3) return;
+        offset += velocity;
+        applyTransform(offset);
+        wrapOffset();
+        velocity *= friction;
+        rafId = requestAnimationFrame(step);
+      }
+      rafId = requestAnimationFrame(step);
+    }
+
+    track.querySelectorAll('img, a').forEach(el => {
+      el.addEventListener('dragstart', e => e.preventDefault());
+    });
+
+    window.addEventListener('load', init);
+    window.addEventListener('resize', init);
