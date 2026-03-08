@@ -22,7 +22,7 @@
 
 .navbar {
     width: 100%;
-    padding: 8px 12px;
+    padding: 16px 12px 8px 12px;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -299,6 +299,7 @@
     color: #888;
     /* Gris clair pour le texte secondaire */
     padding: 0 5%;
+    padding-top: 116px;
     margin-bottom: 80px;
 }
 
@@ -314,6 +315,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 5%;
+    padding-top: 56px;
     margin-bottom: 60px;
     font-size: 0.9rem;
     line-height: 1.6;
