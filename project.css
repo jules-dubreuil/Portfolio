@@ -1,0 +1,192 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+    margin-left: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.btn-margin-left {
+    margin-left: auto;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    font-family: "inter",sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+/*HERO*/
+
+.hero {
+    padding-top: 32px;
+    padding-inline: 32px;
+}
+
+.label {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: grey;
+}
+
+.title {
+    font-family: "playfair display", serif;
+    font-size: 64px;
+    font-weight: 300;
+    padding-bottom: 64px;
+}
+
+.text-grid {
+    font-family: "inter", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    gap: 88px;
+    padding-bottom: 56px;
+}
+
+.img-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/*FOOTER*/
+
+.footer {
+    padding-top: 80px;
+    border-top: 1px solid #eee;
+    overflow: hidden;
+    /* Important pour le défilement */
+}
+
+/* --- Section 1: Headline --- */
+.footer-headline {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #888;
+    /* Gris clair pour le texte secondaire */
+    padding: 0 5%;
+    margin-bottom: 80px;
+}
+
+.footer-headline em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #000;
+}
+
+/* --- Section 2: Colonnes --- */
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 5%;
+    margin-bottom: 60px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.column {
+    font-family: "inter", sans-serif;
+    list-style: none;
+    margin-left: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* --- Section 3: Marquee (Nom qui défile) --- */
+.marquee-container {
+    width: 100%;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.marquee-content span {
+    font-family: "Inter", sans-serif;
+    font-size: 8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-right: 50px;
+    /* Espace entre les répétitions */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* On défile de la moitié car le texte est doublé */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-headline {
+        font-size: 2rem;
+    }
+
+    .marquee-content span {
+        font-size: 4rem;
+    }
+}
