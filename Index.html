@@ -14,8 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
-    <title>Portoflio</title>
-
+    <title>Portfolio</title>
 </head>
 
 <body>
@@ -26,13 +25,50 @@
                 <li class="items">ABOUT ME</li>
                 <li class="items">WORKS</li>
             </ul>
-            <a href="google.com" class="btn primary">
-                <span>CONTACT</span>
-                <i class="ph ph-arrow-right"></i>
-            </a>
+            <section class="btn-margin-left">
+                <a href="google.com" class="btn primary dark">
+                    <span>CONTACT</span>
+                    <i class="ph ph-arrow-right" style="font-size: 24px;"></i>
+                </a>
+            </section>
         </nav>
     </section>
-    <div class="gradient-canvas"></div>
+
+    <div class="hero-wrapper">
+        <div class="gradient-canvas"></div>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="title">I strive to make the complex <em class="italic obvious">Obvious</em></h1>
+                <h3 class="hero-subtitle">Complexity is not inevitable, it's a design defect. I analyze, structure
+                    and simplify to create experiences that work without unnecessary cognitive effort.</h3>
+            </div>
+            <div class="btn-container">
+                <a href="google.com" class="btn primary light">
+                    <span>DOWNLOAD CV</span>
+                    <i class="ph ph-arrow-right" style="font-size: 24px;"></i>
+                </a>
+                <a href="google.com" class="btn secondary white">
+                    <span>LINKEDIN</span>
+                    <i class="ph ph-arrow-right" style="font-size: 24px;"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <section class="about-me">
+        <div class="top-content">
+            <div class="label">About me</div>
+            <h1 class="title">Hi, i'm  Jules <em class="italic Dubreuil">Dubreuil</em></h1>
+        </div>
+        <div class="picture">
+            <img src="Ressources-IMG/Portrait Jules copie.jpg" class="img">
+            <div class="right-content">
+                <div class="top-paragraphe">I design digital products that turn complexity into clarity. Through research, structure and intentional UI decisions. </div>
+                <div class="bottom-paragraphe"><span class="gras">UX|UI Designer and Developer</span>, creating interfaces that feel obvious from the first interaction.</div>
+            </div>
+        </div>
+    </section>
+
     <script type="module" src="/shaders.js"></script>
     <script type="module" src="/scripts.js"></script>
 </body>
