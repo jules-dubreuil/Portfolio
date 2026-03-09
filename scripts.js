@@ -1,6 +1,8 @@
 import * as THREE from './modules/three.module.js';
 import { vertexShader, fluidShader, displayShader } from './shaders.js';
 
+
+
 const config = {
     brushSize: 25,
     brushStrength: 0.5,
@@ -15,6 +17,7 @@ const config = {
     colorIntensity: 2,
     softness: 0.1,
 };
+
 /*
 const config = {
     brushSize: 25.0,
@@ -207,11 +210,10 @@ animate();
 /*CARROUSEL*/
 
 const projects = [
-      { description: "Plonger dans une expérience unique et immersive", name: "Avengers" },
-      { description: "Une identité de nature entraînante", name: "Ultra-Trail Monarque" },
-      { description: "Entretenir la flamme pour les arts visuels", name: "Musée des Beaux-Arts" },
-      { description: "Redéfinir l'élégance en s'appropriant les codes du luxe", name: "Bélanger" },
-      { description: "Créer une présence digitale forte et mémorable", name: "Studio Nord" },
+      { description: "Plonger dans une expérience unique et immersive", name: "Nomadia" },
+      { description: "Une identité de nature entraînante", name: "HONOR TALENT" },
+      { description: "Entretenir la flamme pour les arts visuels", name: "InTempo" },
+      { description: "Redéfinir l'élégance en s'appropriant les codes du luxe", name: "Photographie" },
     ];
 
     const track = document.getElementById('track');
