@@ -89,6 +89,18 @@
     padding-bottom: 88px;
 }
 
+.left {
+    flex: 1;
+}
+
+.middle {
+    flex: 1;
+}
+
+.right {
+    flex: 1;
+}
+
 .img-grid {
     display: flex;
     flex-direction: column;
