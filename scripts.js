@@ -204,9 +204,6 @@ window.addEventListener("resize", () => {
 
 animate();
 
-
-
-
 /*CARROUSEL*/
 
 const projects = [
