@@ -63,7 +63,6 @@
     width: 100%;
 }
 
-
 .btn-margin-left {
     margin-left: auto;
 }
@@ -244,8 +243,7 @@
     font-weight: 500;
 }
 
-/*CARROUSEL*/
-
+/* ===== CAROUSEL ===== */
 .section-header {
     display: flex;
     align-items: flex-start;
@@ -349,22 +347,17 @@
     height: 1px;
 }
 
-
-/*FOOTER*/
-
+/* ===== FOOTER ===== */
 .footer {
     padding-top: 80px;
     border-top: 1px solid #eee;
     overflow: hidden;
-    /* Important pour le défilement */
 }
 
-/* --- Section 1: Headline --- */
 .footer-headline {
     font-size: 3.5rem;
     font-weight: 300;
     color: #888;
-    /* Gris clair pour le texte secondaire */
     padding: 0 5%;
     padding-top: 116px;
     margin-bottom: 80px;
@@ -376,7 +369,6 @@
     color: #000;
 }
 
-/* --- Section 2: Colonnes --- */
 .footer-columns {
     display: flex;
     justify-content: space-between;
@@ -396,13 +388,11 @@
     margin-bottom: 0px;
 }
 
-/* Hover soulignement sans toucher la hauteur */
 .items-footer {
     display: inline-block;
     text-decoration: none;
-    line-height: 1.6; /* garde la hauteur stable */
+    line-height: 1.6;
     cursor: pointer;
-    text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s ease;
     color: inherit;
@@ -412,14 +402,12 @@
     border-bottom: 1px solid currentColor;
 }
 
-/* Curseur LinkedIn avec aperçu */
 .items.linkedin {
     text-decoration: none;
     color: inherit;
     cursor: url('Ressources-IMG/Linkedin.png') 0 0, pointer;
 }
 
-/* --- Section 3: Marquee (Nom qui défile) --- */
 .marquee-container {
     width: 100%;
     white-space: nowrap;
@@ -432,6 +420,7 @@
 .marquee-content {
     display: flex;
     animation: scroll 20s linear infinite;
+    min-width: max-content;
 }
 
 .marquee-content span {
@@ -440,33 +429,244 @@
     font-weight: 400;
     text-transform: uppercase;
     padding-right: 50px;
-    /* Espace entre les répétitions */
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-
-    /* On défile de la moitié car le texte est doublé */
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .footer-columns {
-        flex-direction: column;
-        gap: 30px;
+/* ==========================================================
+   RESPONSIVE — TABLETTE  (max-width: 1024px)
+   ========================================================== */
+@media (max-width: 1024px) {
+
+    /* Navbar */
+    .menu {
+        gap: 24px;
+        margin-left: 16px;
     }
 
+    /* Hero */
+    .hero {
+        left: 24px;
+        right: 24px;
+        max-width: calc(100% - 48px);
+        bottom: 64px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    /* About */
+    .picture {
+        gap: 64px;
+        padding-right: 0;
+    }
+
+    .img {
+        width: 240px;
+    }
+
+    .top-paragraphe {
+        font-size: 24px;
+    }
+
+    .bottom-paragraphe {
+        font-size: 20px;
+    }
+
+    /* Carousel */
+    .card {
+        flex: 0 0 35vw;
+    }
+
+    /* Footer */
     .footer-headline {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        padding-top: 80px;
+        margin-bottom: 48px;
     }
 
     .marquee-content span {
-        font-size: 4rem;
+        font-size: 6rem;
+    }
+}
+
+/* ==========================================================
+   RESPONSIVE — MOBILE  (max-width: 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+
+    /* --- Navbar --- */
+    .navbar {
+        padding: 12px 16px;
+        flex-wrap: nowrap;
+        gap: 0;
+        align-items: center;
+    }
+
+    .menu {
+        gap: 16px;
+        margin-left: 0;
+        font-size: 12px;
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    .btn-margin-left {
+        margin-left: auto;
+        flex-shrink: 0;
+        padding-left: 12px;
+    }
+
+    /* On réduit le bouton Contact sur mobile */
+    .btn {
+        padding: 10px 14px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    /* --- Hero --- */
+    .hero-wrapper {
+        height: 100svh;
+    }
+
+    .hero {
+        left: 20px;
+        right: 20px;
+        bottom: 48px;
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: clamp(32px, 8vw, 48px);
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* --- About Me --- */
+    .about-me {
+        padding: 48px 20px;
+    }
+
+    .top-content {
+        max-width: 100%;
+        padding-bottom: 48px;
+    }
+
+    .picture {
+        flex-direction: column;
+        gap: 32px;
+        padding-right: 0;
+    }
+
+    .img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .right-content {
+        gap: 24px;
+    }
+
+    .top-paragraphe {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .bottom-paragraphe {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    /* --- Carousel --- */
+    .section-header {
+        padding: 24px 20px 16px;
+    }
+
+    .section-title {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+
+    .carousel-outer {
+        padding-top: 16px;
+    }
+
+    .card {
+        flex: 0 0 72vw;
+        min-width: 220px;
+        max-width: 320px;
+    }
+
+    .card-description {
+        font-size: 18px;
+    }
+
+    /* --- Footer --- */
+    .footer-headline {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        padding-top: 64px;
+        margin-bottom: 32px;
+        line-height: 1.3;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 28px;
+        padding-top: 32px;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 40px;
+    }
+
+    .column {
+        margin-left: 0;
+    }
+
+    .marquee-content span {
+        font-size: 3.5rem;
+    }
+}
+
+/* ==========================================================
+   RESPONSIVE — PETIT MOBILE  (max-width: 400px)
+   ========================================================== */
+@media (max-width: 400px) {
+
+    .menu {
+        gap: 12px;
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .card {
+        flex: 0 0 85vw;
+    }
+
+    .footer-headline {
+        font-size: 1.4rem;
+    }
+
+    .marquee-content span {
+        font-size: 2.5rem;
     }
 }
