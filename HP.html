@@ -18,7 +18,8 @@
 </head>
 
 <body>
-    <section class="header">
+
+    <section class="header reveal">
         <nav class="navbar">
             <ul class="menu">
                 <li class="items"><a href="HP.html">HOME</a></li>
@@ -38,11 +39,11 @@
         <div class="gradient-canvas"></div>
         <section class="hero">
             <div class="hero-content">
-                <h1 class="title">I strive to make the complex <em class="italic obvious">Obvious</em></h1>
-                <h3 class="hero-subtitle">Complexity is not inevitable, it's a design defect. I analyze, structure
+                <h1 class="title hero-title">I strive to make the complex <em class="italic obvious">Obvious</em></h1>
+                <h3 class="hero-subtitle hero-sub">Complexity is not inevitable, it's a design defect. I analyze, structure
                     and simplify to create experiences that work without unnecessary cognitive effort.</h3>
             </div>
-            <div class="btn-container">
+            <div class="btn-container hero-btns">
                 <a href="google.com" class="btn primary light">
                     <span>DOWNLOAD CV</span>
                     <i class="ph ph-arrow-right" style="font-size: 24px;"></i>
@@ -56,40 +57,40 @@
     </div>
 
     <section class="about-me" id="about-me">
-        <div class="top-content">
+        <div class="top-content reveal">
             <div class="label">About me</div>
             <h1 class="title">Hi, i'm Jules <em class="italic Dubreuil">Dubreuil</em></h1>
         </div>
         <div class="picture">
-            <img src="Ressources-IMG/Portrait Jules copie.jpg" class="img">
+            <img src="Ressources-IMG/Portrait Jules copie.jpg" class="img reveal">
             <div class="right-content">
-                <div class="top-paragraphe">I design digital products that turn complexity into clarity. Through
+                <div class="top-paragraphe reveal" style="--reveal-delay: 0.1s">I design digital products that turn complexity into clarity. Through
                     research, structure and intentional UI decisions. </div>
-                <div class="bottom-paragraphe"><span class="gras">UX|UI Designer and Developer</span>, creating
+                <div class="bottom-paragraphe reveal" style="--reveal-delay: 0.2s"><span class="gras">UX|UI Designer and Developer</span>, creating
                     interfaces that feel obvious from the first interaction.</div>
             </div>
         </div>
     </section>
 
-    <div class="section-header" id="works">
+    <div class="section-header reveal" id="works">
         <section class="top-project">
             <div class="label">Works</div>
             <h2 class="section-title">Project that define <em class="italic">my crafts</em></h2>
         </section>
     </div>
 
-    <div class="carousel-outer">
+    <div class="carousel-outer reveal">
         <div class="carousel-track" id="track"></div>
         <div class="carousel-hint"></div>
     </div>
 
 
     <footer id="contact">
-        <div class="footer-headline">
+        <div class="footer-headline reveal">
             The <em>end</em>... and the <em>beginning</em> with <em>you...</em>
         </div>
 
-        <div class="footer-columns">
+        <div class="footer-columns reveal" style="--reveal-delay: 0.15s">
             <div class="column">
                 Nantes / Paris
             </div>
@@ -120,6 +121,7 @@
 
     <script type="module" src="/shaders.js"></script>
     <script type="module" src="/scripts.js"></script>
+    <script src="/animations.js"></script>
 </body>
 
 </html>
