@@ -207,10 +207,10 @@ animate();
 /*CARROUSEL*/
 
 const projects = [
-  { description: "Plonger dans une expérience unique et immersive", name: "Nomadia", url: "Nomadia.html" },
-  { description: "Une identité de nature entraînante", name: "HONOR TALENT", url: "Honor.html" },
-  { description: "Entretenir la flamme pour les arts visuels", name: "InTempo", url: "Intempo.html" },
-  { description: "Redéfinir l'élégance en s'appropriant les codes du luxe", name: "Photographie", url: "Infinite-canva.html" },
+  { description: "Travel has always been about the people you meet along the way.", name: "Nomadia", url: "Nomadia.html" },
+  { description: "Personalized AI, designed to feel human.", name: "HONOR LOCK SCREEN", url: "Honor.html" },
+  { description: "Real-time AI coaching for sharper public speaking", name: "InTempo", url: "Intempo.html" },
+  { description: "A set of my best shots", name: "Photography", url: "Infinite-canva.html" },
 ];
 
 const track = document.getElementById('track');
