@@ -169,8 +169,8 @@
     color: #888;
     /* Gris clair pour le texte secondaire */
     padding: 0 5%;
-    margin-bottom: 80px;
     padding-top: 116px;
+    margin-bottom: 80px;
 }
 
 .footer-headline em {
@@ -197,6 +197,29 @@
     margin-left: 32px;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+/* Hover soulignement sans toucher la hauteur */
+.items-footer {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.6; /* garde la hauteur stable */
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+    color: inherit;
+}
+
+.items-footer:hover {
+    border-bottom: 1px solid currentColor;
+}
+
+/* Curseur LinkedIn avec aperçu */
+.items.linkedin {
+    text-decoration: none;
+    color: inherit;
+    cursor: url('Ressources-IMG/Linkedin.png') 0 0, pointer;
 }
 
 /* --- Section 3: Marquee (Nom qui défile) --- */
