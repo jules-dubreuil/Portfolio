@@ -43,7 +43,26 @@
     display: block;
     text-decoration: none;
     color: inherit;
+    position: relative;
+    padding-bottom: 4px;
 }
+
+.items a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: black;
+    transition: width 0.25s ease;
+}
+
+.items a:hover::after,
+.items a.active::after {
+    width: 100%;
+}
+
 
 .btn-margin-left {
     margin-left: auto;

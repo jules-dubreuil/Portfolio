@@ -70,7 +70,7 @@
 
 /* ===== BUTTONS ===== */
 .btn {
-    font-family: "inter",sans-serif;
+    font-family: "inter", sans-serif;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -96,14 +96,29 @@
     transform: translateX(0);
 }
 
-.dark::before  { background-color: white; }
-.dark:hover    { color: black; }
+.dark::before {
+    background-color: white;
+}
 
-.light::before { background-color: black; }
-.light:hover   { color: white; }
+.dark:hover {
+    color: black;
+}
 
-.white::before { background-color: white; }
-.white:hover   { color: black; }
+.light::before {
+    background-color: black;
+}
+
+.light:hover {
+    color: white;
+}
+
+.white::before {
+    background-color: white;
+}
+
+.white:hover {
+    color: black;
+}
 
 .dark {
     background-color: black;
@@ -287,23 +302,27 @@
 }
 
 .card[data-index="0"] .card-image {
-    background-image: url(Ressources-IMG/Portrait\ Jules\ copie.jpg);
+    background-image: url(Ressources-IMG/Mockup/01.png);
     background-size: cover;
+    background-position: center;
 }
 
 .card[data-index="1"] .card-image {
-    background-image: url(Ressources-IMG/Portrait\ Jules\ copie.jpg);
+    background-image: url(Ressources-IMG/Mockup/02.png);
     background-size: cover;
+    background-position: center;
 }
 
 .card[data-index="2"] .card-image {
-    background-image: url(Ressources-IMG/Portrait\ Jules\ copie.jpg);
+    background-image: url(Ressources-IMG/Mockup/03.png);
     background-size: cover;
+    background-position: center;
 }
 
 .card[data-index="3"] .card-image {
-    background-image: url(Ressources-IMG/Portrait\ Jules\ copie.jpg);
+    background-image: url(Ressources-IMG/photos/06.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .card-caption {
