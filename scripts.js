@@ -207,32 +207,49 @@ animate();
 /*CARROUSEL*/
 
 const projects = [
-      { description: "Plonger dans une expérience unique et immersive", name: "Nomadia" },
-      { description: "Une identité de nature entraînante", name: "HONOR TALENT" },
-      { description: "Entretenir la flamme pour les arts visuels", name: "InTempo" },
-      { description: "Redéfinir l'élégance en s'appropriant les codes du luxe", name: "Photographie" },
-    ];
+  { description: "Plonger dans une expérience unique et immersive", name: "Nomadia", url: "Nomadia.html" },
+  { description: "Une identité de nature entraînante", name: "HONOR TALENT", url: "Honor.html" },
+  { description: "Entretenir la flamme pour les arts visuels", name: "InTempo", url: "Intempo.html" },
+  { description: "Redéfinir l'élégance en s'appropriant les codes du luxe", name: "Photographie", url: "Infinite-canva.html" },
+];
 
-    const track = document.getElementById('track');
+const track = document.getElementById('track');
 
-    function createCard(project, index) {
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.dataset.index = index % projects.length;
-      card.innerHTML = `
-        <div class="card-image"></div>
-        <div class="card-caption">
-          <div class="card-description">${project.description}</div>
-          <div class="card-name">${project.name}</div>
-        </div>
-      `;
-      return card;
+function createCard(project, index) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.index = index % projects.length;
+  // On ajoute un style pour montrer que c'est cliquable
+  card.style.cursor = 'pointer'; 
+
+  card.innerHTML = `
+    <div class="card-image"></div>
+    <div class="card-caption">
+      <div class="card-description">${project.description}</div>
+      <div class="card-name">${project.name}</div>
+    </div>
+  `;
+
+  // --- Gestion du clic ---
+  let isDragging = false;
+  
+  // Si la souris bouge, on considère que c'est un drag, pas un clic
+  card.addEventListener('mousemove', () => isDragging = true);
+  card.addEventListener('mousedown', () => isDragging = false);
+
+  card.addEventListener('click', () => {
+    if (!isDragging) {
+      window.location.href = project.url;
     }
+  });
 
-    // Render 3 sets so we can loop in both directions
-    for (let s = 0; s < 3; s++) {
-      projects.forEach((p, i) => track.appendChild(createCard(p, i)));
-    }
+  return card;
+}
+
+// Le reste de ton code (boucles, momentum, etc.) reste inchangé
+for (let s = 0; s < 3; s++) {
+  projects.forEach((p, i) => track.appendChild(createCard(p, i)));
+}
 
     let offset = 0;
     let isDown = false;
