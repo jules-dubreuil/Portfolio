@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap — Portfolio Jules Dubreuil
+  Structure du projet VS Code
+-->
+<sitemap>
+
+  <!-- ═══════════════════════════════════════════
+       PAGE PRINCIPALE
+  ═══════════════════════════════════════════ -->
+  <page id="home" file="index.html" stylesheet="HP.css">
+    <title>Home Page</title>
+    <description>Page d'accueil du portfolio — UX/UI Designer &amp; Developer</description>
+
+    <scripts>
+      <script src="shaders.js" type="module"/>
+      <script src="scripts.js" type="module"/>
+      <script src="animations.js"/>
+    </scripts>
+
+    <sections>
+      <section id="hero">
+        <label>Hero</label>
+        <elements>
+          <element>Titre principal</element>
+          <element>Sous-titre</element>
+          <element>Bouton Download CV → Ressources-IMG/Dubreuil Jules CV.pdf</element>
+          <element>Bouton LinkedIn → https://www.linkedin.com/in/jules-dubreuil-26583933b/</element>
+          <element>Gradient canvas animé (shaders.js)</element>
+        </elements>
+      </section>
+
+      <section id="about-me" anchor="#about-me">
+        <label>About Me</label>
+        <elements>
+          <element>Portrait → Ressources-IMG/Portrait Jules copie.jpg</element>
+          <element>Paragraphe de présentation</element>
+          <element>Titre UX/UI Designer &amp; Developer</element>
+        </elements>
+      </section>
+
+      <section id="works" anchor="#works">
+        <label>Works</label>
+        <elements>
+          <element>Carousel de projets (généré par scripts.js)</element>
+          <element type="link" href="honor.html">Honor 2026</element>
+          <element type="link" href="intempo.html">InTempo</element>
+          <element type="link" href="nomadia.html">Nomadia</element>
+          <element type="link" href="photos.html">Infinite Canvas (Photos)</element>
+        </elements>
+      </section>
+
+      <section id="contact" anchor="#contact">
+        <label>Footer / Contact</label>
+        <elements>
+          <element>Localisation : Nantes / Paris</element>
+          <element type="link" href="https://www.linkedin.com/in/jules-dubreuil-26583933b/">LinkedIn</element>
+          <element type="link" href="mailto:julesdubreuil5@gmail.com">Email</element>
+          <element>Téléphone : 07 66 14 52 28</element>
+          <element>Marquee animée : DUBREUIL JULES ©</element>
+        </elements>
+      </section>
+    </sections>
+  </page>
+
+  <!-- ═══════════════════════════════════════════
+       PAGES PROJETS (template commun : project.css)
+  ═══════════════════════════════════════════ -->
+
+  <page id="honor" file="honor.html" stylesheet="project.css">
+    <title>Honor 2026 — The Digital Artefact</title>
+    <description>Humaniser l'interface mobile via une IA émotionnelle et personnalisée</description>
+    <scripts>
+      <script src="animations.js"/>
+    </scripts>
+    <sections>
+      <section id="honor-hero">
+        <label>Hero</label>
+        <elements>
+          <element>Label : HONOR 2026: The Digital Artefact</element>
+          <element>Titre projet</element>
+          <element>Grille texte 3 colonnes (contexte / problématique / solution)</element>
+        </elements>
+      </section>
+      <section id="honor-gallery">
+        <label>Galerie images</label>
+        <images folder="Ressources-IMG/honor/" count="12" pattern="01.jpg → 12.jpg"/>
+      </section>
+      <section id="honor-footer">
+        <label>Footer / Contact</label>
+        <note>Identique au footer de index.html</note>
+      </section>
+    </sections>
+  </page>
+
+  <page id="intempo" file="intempo.html" stylesheet="project.css">
+    <title>InTempo — Master Your Speech</title>
+    <description>Coaching vocal IA en temps réel pour améliorer la prise de parole</description>
+    <scripts>
+      <script src="animations.js"/>
+    </scripts>
+    <sections>
+      <section id="intempo-hero">
+        <label>Hero</label>
+        <elements>
+          <element>Label : InTempo: Master Your Speech</element>
+          <element>Titre projet</element>
+          <element>Grille texte 3 colonnes (contexte / problématique / solution)</element>
+        </elements>
+      </section>
+      <section id="intempo-gallery">
+        <label>Galerie images</label>
+        <images folder="Ressources-IMG/Intempo/" count="16" pattern="01.jpg → 15.jpg (+ 08-bis.jpg)"/>
+      </section>
+      <section id="intempo-footer">
+        <label>Footer / Contact</label>
+        <note>Identique au footer de index.html</note>
+      </section>
+    </sections>
+  </page>
+
+  <page id="nomadia" file="nomadia.html" stylesheet="project.css">
+    <title>Nomadia</title>
+    <description>Plateforme mobile immersive centrée sur la connexion humaine et le partage culturel</description>
+    <scripts>
+      <script src="animations.js"/>
+    </scripts>
+    <sections>
+      <section id="nomadia-hero">
+        <label>Hero</label>
+        <elements>
+          <element>Label : NOMADIA</element>
+          <element>Titre projet</element>
+          <element>Grille texte 3 colonnes (contexte / système double profil / expérience)</element>
+        </elements>
+      </section>
+      <section id="nomadia-gallery">
+        <label>Galerie images</label>
+        <images folder="Ressources-IMG/nomadia/" count="13" pattern="1.jpg → 14.jpg (sans 10.jpg)"/>
+      </section>
+      <section id="nomadia-footer">
+        <label>Footer / Contact</label>
+        <note>Identique au footer de index.html</note>
+      </section>
+    </sections>
+  </page>
+
+  <page id="photos" file="photos.html" stylesheet="inline (styles embarqués)">
+    <title>Infinite Canvas — Galerie photo</title>
+    <description>Canvas infini défilable avec lightbox et zoom pinch-to-zoom</description>
+    <scripts>
+      <script src="animations.js"/>
+      <script type="inline">Canvas infini, drag, zoom, lightbox navigation</script>
+    </scripts>
+    <sections>
+      <section id="photos-canvas">
+        <label>Canvas infini</label>
+        <elements>
+          <element>Grille 4 colonnes masonry (280px par colonne, gap 116px)</element>
+          <element>Drag souris et touch</element>
+          <element>Zoom molette / pinch</element>
+          <element>Recyclage de tuiles infinies (TILE_GRID 5×5)</element>
+        </elements>
+        <images folder="Ressources-IMG/photos/" count="33" pattern="01.jpg → 33.jpg"/>
+      </section>
+      <section id="photos-lightbox">
+        <label>Lightbox</label>
+        <elements>
+          <element>Affichage plein écran au clic</element>
+          <element>Navigation flèches gauche / droite</element>
+          <element>Pagination par points (dots)</element>
+          <element>Fermeture Escape ou clic extérieur</element>
+        </elements>
+      </section>
+    </sections>
+  </page>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION COMMUNE (toutes les pages)
+  ═══════════════════════════════════════════ -->
+  <navigation shared="true">
+    <link href="index.html" label="HOME"/>
+    <link href="index.html#about-me" label="ABOUT ME"/>
+    <link href="index.html#works" label="WORKS"/>
+    <link href="index.html#contact" label="CONTACT" type="button"/>
+  </navigation>
+
+  <!-- ═══════════════════════════════════════════
+       ASSETS
+  ═══════════════════════════════════════════ -->
+  <assets>
+    <stylesheets>
+      <file>HP.css</file>
+      <file>project.css</file>
+    </stylesheets>
+    <scripts>
+      <file>scripts.js</file>
+      <file>shaders.js</file>
+      <file>animations.js</file>
+    </scripts>
+    <images>
+      <folder path="Ressources-IMG/honor/" files="12"/>
+      <folder path="Ressources-IMG/Intempo/" files="16"/>
+      <folder path="Ressources-IMG/nomadia/" files="13"/>
+      <folder path="Ressources-IMG/photos/" files="33"/>
+      <file path="Ressources-IMG/Portrait Jules copie.jpg"/>
+      <file path="Ressources-IMG/Dubreuil Jules CV.pdf"/>
+    </images>
+    <external>
+      <dependency name="Phosphor Icons" url="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1"/>
+      <dependency name="Google Fonts — Inter + Playfair Display" url="https://fonts.googleapis.com"/>
+    </external>
+  </assets>
+
+</sitemap>
